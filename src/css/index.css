@@ -36,13 +36,14 @@ nav {
 
 main {
     grid-area: main;
-
     display: grid;
-
     grid-template-areas:
         "name ed"
         "exp proj"
         "lang soft";
+
+    gap: 30px;
+    padding: 30px;
 
     grid-template-rows: auto 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -77,29 +78,49 @@ main {
 }
 
 .exp,
-.soft,
 .proj,
-.lang {
-    padding-left: 20px;
-    /* justify-self: center; */
-    align-self: center;
-}
-
-.exp {
-    grid-area: exp;
-}
-
-.proj {
-    grid-area: proj;
-}
-
-.lang {
-    grid-area: lang;
-}
-
+.lang,
 .soft {
-    grid-area: soft;
+    z-index: 1;
 }
+
+.box {
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* border-radius: 20px; */
+    transition: transform 3s ease-in-out;
+}
+
+.box:hover {
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(from var(--new_angle), transparent, var(--color-tertiary));
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.box:hover:before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: var(--color-primary);
+    height: 90%;
+    width: 90%;
+    margin: 40px;
+    border-radius: 20px;
+}
+
+
 
 .cv {
     /* mt-4 inline-block  text-white px-8 py-2 rounded shadow hover:bg-tertiary hover:text-primary hover:border-white hover:border-2 */
