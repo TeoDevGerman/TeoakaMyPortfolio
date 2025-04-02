@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #08244c;
+    --color-secondary: #ffffff;
+    --color-tertiary: #d8b46c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        "navbar"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+nav {
+    top: 0;
+    position: sticky;
+    grid-area: navbar;
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+
+    display: grid;
+
+    grid-template-areas:
+        "name ed"
+        "exp proj"
+        "lang soft";
+
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-areas:
+            "name ed"
+            "exp exp"
+            "proj proj"
+            "lang lang"
+            "soft soft";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+.name {
+    grid-area: name;
+    font-weight: bold;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.ed {
+    grid-area: ed;
+    padding: 20px;
+    color: gray;
+    justify-self: end;
+}
+
+.exp,
+.soft,
+.proj,
+.lang {
+    padding-left: 20px;
+    /* justify-self: center; */
+    align-self: center;
+}
+
+.exp {
+    grid-area: exp;
+}
+
+.proj {
+    grid-area: proj;
+}
+
+.lang {
+    grid-area: lang;
+}
+
+.soft {
+    grid-area: soft;
+}
+
+.cv {
+    /* mt-4 inline-block  text-white px-8 py-2 rounded shadow hover:bg-tertiary hover:text-primary hover:border-white hover:border-2 */
+    display: inline-block;
+    gap: 5px;
+    padding: 2px;
+    margin-top: 10px;
+
+    color: var(--color-secondary);
+    transition: ease-in .15s;
+}
+
+.cv:hover {
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-tertiary);
+    border-radius: 0.25em;
+    color: var(--color-primary)
+}
+
+footer {
+    grid-area: footer;
+
+    display: flex;
+    justify-content: center;
+}
