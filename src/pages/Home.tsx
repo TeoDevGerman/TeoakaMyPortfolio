@@ -16,7 +16,6 @@ export default function Home() {
     } else {
         function animateGradient() {
             angle = (angle + 1) % 360;
-            console.log("Animating to:", angle);
             boxes.forEach(box => {
                 (box as HTMLElement).style.setProperty("--new_angle", `${angle}deg`);
             });
