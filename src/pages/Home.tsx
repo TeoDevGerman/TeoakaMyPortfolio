@@ -1,29 +1,31 @@
 // import { motion } from "framer-motion";
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "../css/index.css"
+import { useEffect } from "react";
 // import { div } from "framer-motion/client";
 // import { FaLinkedin, FaGithub, FaEnvelope, FaSun, FaMoon } from "react-icons/fa";
 export default function Home() {
-    console.log("🚀 Script is running!");
 
-    let angle = 0;
-    const boxes = document.querySelectorAll(".box");
-
-    console.log("Boxes found:", boxes.length);
-
-    if (boxes.length === 0) {
-        console.error("❌ No elements with class 'box' found!");
-    } else {
-        function animateGradient() {
-            angle = (angle + 1) % 360;
-            boxes.forEach(box => {
-                (box as HTMLElement).style.setProperty("--new_angle", `${angle}deg`);
-            });
-            requestAnimationFrame(animateGradient);
+    useEffect(
+        () => {
+            const boxes = document.querySelectorAll(".box");
+            console.log("Boxes found:", boxes.length);
+            if (boxes.length === 0) {
+                console.error("❌ No elements with class 'box' found!");
+            } else {
+                let angle = 0;
+                console.log("running")
+                function animateGradient() {
+                    angle = (angle + 1) % 360;
+                    boxes.forEach((box) => {
+                        (box as HTMLElement).style.setProperty("--new_angle", `${angle}deg`);
+                    });
+                    requestAnimationFrame(animateGradient);
+                }
+                animateGradient();
+            }
         }
-
-        animateGradient();
-    }
+    )
 
     return (
         <div className="gridContainer">

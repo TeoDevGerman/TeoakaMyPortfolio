@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+    --new_angle: 0deg;
+}
+
 @theme {
     --color-primary: #08244c;
     --color-secondary: #ffffff;
@@ -92,8 +96,6 @@ main {
     align-items: center;
     height: 100%;
     width: 100%;
-    /* border-radius: 20px; */
-    transition: transform 3s ease-in-out;
 }
 
 .box:hover {
@@ -108,7 +110,7 @@ main {
     border-radius: 20px;
 }
 
-.box:hover:before {
+.box:hover::before {
     content: "";
     width: 200px;
     height: 200px;
