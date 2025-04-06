@@ -27,10 +27,38 @@ export default function Home() {
         }
     )
 
+    function showSidebar() {
+        const sidebar = document.querySelector(".sidebar") as HTMLElement;
+        sidebar?.style.setProperty("display", "flex")
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar") as HTMLElement;
+        sidebar?.style.setProperty("display", "none")
+    }
+
     return (
         <div className="gridContainer">
             <nav>
-                Navbar
+                <ul className="sidebar text-primary">
+                    <li onClick={hideSidebar}>
+                        <a className="bg-white" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#08244c"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /><path xmlns="http://www.w3.org/2000/svg" d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg></a>
+                    </li>
+                    <li>
+                        <a className="bg-white" href="#">Oster Map</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="/">teoakaHOME</a>
+                    </li>
+                    <li className="hideOnMobile">
+                        <a href="#">Oster Map</a>
+                    </li>
+                    <li className="menu-button" onClick={showSidebar}>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#08244c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a>
+                    </li>
+                </ul>
             </nav>
 
             <main>
@@ -44,7 +72,7 @@ export default function Home() {
                         2020-2025
                     </p>
                 </div>
-                <div className="box">
+                <div className="box exp">
                     <div className="exp">
                         <div className="text-4xl font-semibold">
                             Work experiences:
@@ -57,7 +85,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="box">
+                <div className="box proj">
                     <div className="proj">
                         <div className="text-4xl font-semibold">
                             Personal Projects
@@ -69,7 +97,7 @@ export default function Home() {
                         <p className="text-xl text-gray-700 dark:text-gray-300">Eigenvalue calculator with Chebychev Polynomials (C++)</p>
                     </div>
                 </div>
-                <div className="box">
+                <div className="box lang">
                     <div className="lang">
                         <h2 className="text-4xl font-semibold">Programming Languages</h2>
                         <div className="text-2xl mt-2 grid grid-cols-2 gap-2">
@@ -81,11 +109,11 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="box">
+                <div className="box soft">
                     <div className="soft">
                         <h2 className="text-4xl font-semibold">About Me</h2>
                         <p className="text-xl text-gray-700 dark:text-gray-300 mt-2">
-                            Passionate about web and App development. Fluent in English & German. Always open to new opportunities!
+                            Passionate about web and App development. <br /> Fluent in English & German. Always open to new opportunities!
                         </p>
                         <div className="flex gap-4 mt-4 text-2xl">
                             <a href="mailto:teomanArbeit@gmail.com" className="text-gray-300 hover:text-tertiary"><FaEnvelope /></a>

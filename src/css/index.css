@@ -29,13 +29,79 @@
 
     background-color: var(--color-primary);
     color: var(--color-secondary);
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 nav {
+    background-color: var(--color-tertiary);
     top: 0;
     position: sticky;
     grid-area: navbar;
     padding: 10px;
+    color: var(--color-primary);
+    z-index: 999;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.15s ease-in;
+
+    border: 2px solid var(--color-tertiary);
+}
+
+nav a:hover {
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+    border: 2px solid var(--color-primary);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+    padding: 10px;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
 }
 
 main {
@@ -54,7 +120,7 @@ main {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     main {
         grid-template-areas:
             "name ed"
@@ -63,7 +129,15 @@ main {
             "lang lang"
             "soft soft";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
     }
 }
 
@@ -86,7 +160,25 @@ main {
 .lang,
 .soft {
     z-index: 1;
+    padding: 20px;
 }
+
+.exp {
+    grid-area: exp;
+}
+
+.proj {
+    grid-area: proj;
+}
+
+.lang {
+    grid-area: lang;
+}
+
+.soft {
+    grid-area: soft;
+}
+
 
 .box {
     position: relative;
