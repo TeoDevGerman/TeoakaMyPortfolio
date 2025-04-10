@@ -181,7 +181,6 @@ main {
 
 
 .box {
-    position: relative;
     align-self: center;
     display: flex;
     justify-content: center;
@@ -204,13 +203,10 @@ main {
 
 .box:hover::before {
     content: "";
-    width: 200px;
-    height: 200px;
     position: absolute;
     background-color: var(--color-primary);
     height: 90%;
     width: 90%;
-    margin: 40px;
     border-radius: 20px;
 }
 
@@ -221,7 +217,6 @@ main {
     display: inline-block;
     gap: 5px;
     padding: 2px;
-    margin-top: 10px;
 
     color: var(--color-secondary);
     transition: ease-in .15s;
