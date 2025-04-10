@@ -53,7 +53,7 @@ export default function Home() {
                         <a href="/">teoakaHOME</a>
                     </li>
                     <li className="hideOnMobile">
-                        <a href="#">Oster Map</a>
+                        <a href="/ostermap">Oster Map</a>
                     </li>
                     <li className="menu-button" onClick={showSidebar}>
                         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#08244c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a>
@@ -77,7 +77,7 @@ export default function Home() {
                         <div className="text-4xl font-semibold">
                             Work experiences:
                         </div>
-                        <p className="text-2xl text-gray-300 mt-2">
+                        <p className="text-2xl text-gray-300">
                             Coach @ codary GmbH (Nov. 2024 - Mar. 2025)
                         </p>
                         <p className="text-xl text-gray-300">
@@ -90,17 +90,17 @@ export default function Home() {
                         <div className="text-4xl font-semibold">
                             Personal Projects
                         </div>
-                        <div className="text-xl text-gray-700 dark:text-gray-300 mt-2">
+                        <div className="text-xl text-gray-700 dark:text-gray-300">
                             Eure Berliner Autopflege App (Flutter),
                         </div>
-                        <p className="text-xl text-gray-700 dark:text-gray-300 mt-2">Portfolio Website (React + Tailwind),</p>
+                        <p className="text-xl text-gray-700 dark:text-gray-300">Portfolio Website (React + Tailwind),</p>
                         <p className="text-xl text-gray-700 dark:text-gray-300">Eigenvalue calculator with Chebychev Polynomials (C++)</p>
                     </div>
                 </div>
                 <div className="box lang">
                     <div className="lang">
                         <h2 className="text-4xl font-semibold">Programming Languages</h2>
-                        <div className="text-2xl mt-2 grid grid-cols-2 gap-2">
+                        <div className="text-2xl grid grid-cols-2 gap-2">
                             {/* <span className="text-center bg-tertiary text-primary rounded">JavaScript</span> */}
                             <span className="text-center bg-tertiary text-primary rounded">Python (2 years)</span>
                             <span className="text-center bg-tertiary text-primary rounded">TypeScript (1 year)</span>
@@ -112,10 +112,10 @@ export default function Home() {
                 <div className="box soft">
                     <div className="soft">
                         <h2 className="text-4xl font-semibold">About Me</h2>
-                        <p className="text-xl text-gray-700 dark:text-gray-300 mt-2">
+                        <p className="text-xl text-gray-700 dark:text-gray-300">
                             Passionate about web and App development. <br /> Fluent in English & German. Always open to new opportunities!
                         </p>
-                        <div className="flex gap-4 mt-4 text-2xl">
+                        <div className="flex gap-4 text-2xl">
                             <a href="mailto:teomanArbeit@gmail.com" className="text-gray-300 hover:text-tertiary"><FaEnvelope /></a>
                             <a href="https://linkedin.com/in/johndoe" className="text-gray-300 hover:text-tertiary"><FaLinkedin /></a>
                             <a href="https://github.com/TeoDevGerman" className="text-gray-300 hover:text-tertiary"><FaGithub /></a>
@@ -124,13 +124,17 @@ export default function Home() {
                             href="/resume.pdf"
                             className="cv"
                         >
-                            <FaDownload className="inline-block mr-2" /> Download CV
+                            <FaDownload className="inline-block" /> Download CV
                         </a>
                     </div>
                 </div>
             </main >
             <footer>
-                Footer
+                <ul>
+                    <li>
+                        hosted by deno
+                    </li>
+                </ul>
             </footer>
         </div >
 
