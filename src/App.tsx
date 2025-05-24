@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import OsterMap from "./pages/OsterMap";
 import 'leaflet/dist/leaflet.css';
 
 
@@ -15,10 +14,6 @@ function App() {
         <Route path="/" element={
           <Suspense fallback={<div>Loading...</div>}>
             <Home />
-          </Suspense>} />
-        <Route path="/ostermap" element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <OsterMap />
           </Suspense>} />
         <Route path="/about" element={
           <Suspense fallback={<div>Loading...</div>}>
