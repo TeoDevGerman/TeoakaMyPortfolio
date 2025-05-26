@@ -2,6 +2,7 @@
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "../css/index.css"
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 // import { div } from "framer-motion/client";
 // import { FaLinkedin, FaGithub, FaEnvelope, FaSun, FaMoon } from "react-icons/fa";
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
                         <a className="bg-white" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#08244c"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /><path xmlns="http://www.w3.org/2000/svg" d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg></a>
                     </li>
                     <li>
-                        <a href="/animatedSVG">SVG Animations</a>
+                        <Link to="/animatedSVG">SVG Animations</Link>
                     </li>
                 </ul>
                 <ul>
@@ -53,7 +54,7 @@ export default function Home() {
                         <a href="/">teoakaHOME</a>
                     </li>
                     <li className="hideOnMobile">
-                        <a href="/animatedSVG">SVG Animations</a>
+                        <Link to="/animatedSVG">SVG Animations</Link>
                     </li>
                     <li className="menu-button" onClick={showSidebar}>
                         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#08244c"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a>
