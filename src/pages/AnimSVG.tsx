@@ -4,7 +4,7 @@ import "../css/index.css"
 import "../css/car1.css"
 import "../css/xbox.css"
 
-export default function About() {
+export default function AnimatedSVG() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-900 p-6">
             {/* Hero Section */}
