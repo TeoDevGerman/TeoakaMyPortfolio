@@ -1,0 +1,54 @@
+svg {
+    cursor: pointer;
+}
+
+#Car1 {
+    fill: #FFFFFF;
+}
+
+#SpeedStripes line,
+#SpeedStripes2 line,
+#Car_handle,
+#Car_Headlight,
+#Tire_outside circle,
+#Tire_outside_2 circle {
+    stroke: var(--contrast-color);
+}
+
+#SpeedStripes,
+#SpeedStripes2 {
+    opacity: var(--opacity-strength);
+}
+
+#Road,
+#Road2,
+#Road3,
+#SpeedStripes,
+#SpeedStripes2 {
+    transition: all 1.5s ease;
+}
+
+#SpeedStripes2 {
+    transition-delay: 0.5s;
+}
+
+#Road2,
+#Road3,
+#SpeedStripes,
+#SpeedStripes2 {
+    transform: translateX(100%);
+}
+
+svg:hover #Road,
+svg:hover #SpeedStripes {
+    transform: translateX(-100%);
+}
+
+svg:hover #Road2,
+svg:hover #SpeedStripes2 {
+    transform: translateX(-100%);
+}
+
+svg:hover #Road3 {
+    transform: translateX(0%);
+}

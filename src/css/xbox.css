@@ -1,0 +1,54 @@
+#Face {
+    animation: fadeInUP 1.5s ease;
+}
+
+@keyframes fadeInUP {
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+#Letters g {
+    opacity: 0;
+    animation: dropIN 8s ease forwards infinite;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+@keyframes dropIN {
+    20% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    30%,
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+svg {
+    cursor: pointer;
+}
+
+#XBox_Buttons_SmilyFace {
+    fill: #ffffff;
+}
+
+#Face {
+    transition: all 1.5s ease;
+}
+
+#happy_Mouth {
+    opacity: 0;
+}
+
+#Face:hover #Happy_Mouth {
+    opacity: 1;
+}
