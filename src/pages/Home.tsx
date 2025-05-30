@@ -117,9 +117,9 @@ export default function Home() {
                             Passionate about web and App development. <br /> Fluent in English & German. Always open to new opportunities!
                         </p>
                         <div className="flex gap-4 text-2xl">
-                            <a href="mailto:teomanArbeit@gmail.com" className="text-gray-300 hover:text-tertiary"><FaEnvelope /></a>
-                            <a href="https://linkedin.com/in/johndoe" className="text-gray-300 hover:text-tertiary"><FaLinkedin /></a>
-                            <a href="https://github.com/TeoDevGerman" className="text-gray-300 hover:text-tertiary"><FaGithub /></a>
+                            <a href="mailto:teomanArbeit@gmail.com" className="text-gray-300 hover:text-tertiary" target="_blank" rel="noopener noreferrer"><FaEnvelope /></a>
+                            <a href="https://www.linkedin.com/in/teoman-wiedenbeck-9713a7339/" className="text-gray-300 hover:text-tertiary" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                            <a href="https://github.com/TeoDevGerman" className="text-gray-300 hover:text-tertiary" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                         </div>
                         <a
                             href="/resume.pdf"
