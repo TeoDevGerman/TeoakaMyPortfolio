@@ -104,6 +104,7 @@ import { useEffect, useState } from "react";
 import "../css/animSVG.css";
 import "../css/car1.css";
 import "../css/xbox.css";
+import { Link } from "react-router-dom";
 
 export default function AnimatedSVG() {
     const [hasMounted, setHasMounted] = useState(false);
@@ -149,12 +150,14 @@ export default function AnimatedSVG() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
                 >
-                    <a
-                        href="/"
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow transition-all duration-300"
-                    >
-                        🏠 Home
-                    </a>
+                    <Link to="/">
+                        <a
+                            href="/"
+                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full shadow transition-all duration-300 mr-4"
+                        >
+                            🏠 Home
+                        </a>
+                    </Link>
                 </motion.div>
             </div>
 
