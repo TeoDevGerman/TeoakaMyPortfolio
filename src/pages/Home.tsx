@@ -122,10 +122,12 @@ export default function Home() {
                             <a href="https://github.com/TeoDevGerman" className="text-gray-300 hover:text-tertiary" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                         </div>
                         <a
-                            href="/resume.pdf"
+                            href="/CV_Teoman_Wiedenbeck.pdf"
                             className="cv"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <FaDownload className="inline-block" /> Download CV
+                            <FaDownload /> Download CV
                         </a>
                     </div>
                 </div>
